@@ -25,6 +25,10 @@
     self.nameLabel.stringValue = app.appName;
     self.versionLabel.stringValue = app.version;
     self.sizeLabel.stringValue = app.size;
+    
+    NSData *imgData = [NSData dataWithContentsOfURL:app.iconUrl];
+    NSImage *icon = [[NSImage alloc]initWithData:imgData];
+    [self.iconView setImage:icon];
 }
 
 @end
