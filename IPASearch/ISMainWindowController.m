@@ -17,6 +17,8 @@
     self.resultsTableView.headerView = nil;
     [self.resultsTableView reloadData];
     self.searchField.delegate = self;
+    // Init fetcher.
+    self.fetcher = [[ISPPDataFetcher alloc] init];
 }
 
 
@@ -28,6 +30,7 @@
 
 - (IBAction)searchAnswer:(id)sender {
     NSLog(@"search answer: %@", [self.searchField stringValue]);
+    [self.fetcher searchAppWithKeyword:[self.searchField stringValue] searchType:PPJBSEARCHTYPE maxResultCount:15];
 }
 
 

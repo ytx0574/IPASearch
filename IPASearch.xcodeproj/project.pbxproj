@@ -14,6 +14,7 @@
 		0AD9D42C1DC1C8E600EB2FCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD9D42A1DC1C8E600EB2FCE /* Main.storyboard */; };
 		0AD9D4351DC1D71A00EB2FCE /* ISResultsTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9D4341DC1D71A00EB2FCE /* ISResultsTableCellView.m */; };
 		0AF7DB8A1DC1E0AD00CDDBC7 /* ISPPDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7DB891DC1E0AD00CDDBC7 /* ISPPDataFetcher.m */; };
+		0AF7DB8D1DC1E42D00CDDBC7 /* ISApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7DB8C1DC1E42D00CDDBC7 /* ISApp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		0AD9D4341DC1D71A00EB2FCE /* ISResultsTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISResultsTableCellView.m; sourceTree = "<group>"; };
 		0AF7DB881DC1E0AD00CDDBC7 /* ISPPDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISPPDataFetcher.h; sourceTree = "<group>"; };
 		0AF7DB891DC1E0AD00CDDBC7 /* ISPPDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISPPDataFetcher.m; sourceTree = "<group>"; };
+		0AF7DB8B1DC1E42D00CDDBC7 /* ISApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISApp.h; sourceTree = "<group>"; };
+		0AF7DB8C1DC1E42D00CDDBC7 /* ISApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISApp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				0AD9D4251DC1C8E600EB2FCE /* ISMainWindowController.h */,
 				0AD9D4261DC1C8E600EB2FCE /* ISMainWindowController.m */,
 				0AF7DB881DC1E0AD00CDDBC7 /* ISPPDataFetcher.h */,
+				0AF7DB8B1DC1E42D00CDDBC7 /* ISApp.h */,
+				0AF7DB8C1DC1E42D00CDDBC7 /* ISApp.m */,
 				0AF7DB891DC1E0AD00CDDBC7 /* ISPPDataFetcher.m */,
 				0AD9D4281DC1C8E600EB2FCE /* Assets.xcassets */,
 				0AD9D42A1DC1C8E600EB2FCE /* Main.storyboard */,
@@ -162,6 +167,7 @@
 				0AF7DB8A1DC1E0AD00CDDBC7 /* ISPPDataFetcher.m in Sources */,
 				0AD9D4241DC1C8E600EB2FCE /* main.m in Sources */,
 				0AD9D4211DC1C8E600EB2FCE /* AppDelegate.m in Sources */,
+				0AF7DB8D1DC1E42D00CDDBC7 /* ISApp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
