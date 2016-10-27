@@ -16,4 +16,17 @@
     // Drawing code here.
 }
 
+- (id)initWithApp: (ISApp *)app {
+    if (self = [super init]) {
+        [self showInfoOfApp: app];
+    }
+    return self;
+}
+
+- (void)showInfoOfApp: (ISApp *)app {
+    self.nameLabel.stringValue = app.appName;
+    self.versionLabel.stringValue = app.version;
+    self.sizeLabel.stringValue = app.size;
+}
+
 @end

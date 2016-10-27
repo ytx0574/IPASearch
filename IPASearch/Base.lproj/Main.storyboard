@@ -786,7 +786,6 @@
                                                                 <outlet property="iconView" destination="cf6-t4-tWH" id="kVc-Gi-NYq"/>
                                                                 <outlet property="nameLabel" destination="kSV-10-OFV" id="712-Cv-6Q3"/>
                                                                 <outlet property="sizeLabel" destination="lPS-3b-pt5" id="9CT-jJ-LqQ"/>
-                                                                <outlet property="textField" destination="kSV-10-OFV" id="ihh-Ty-L6j"/>
                                                                 <outlet property="versionLabel" destination="ycV-LQ-eAM" id="3M0-Tr-E5j"/>
                                                             </connections>
                                                         </tableCellView>

@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ISApp.h"
 
 @interface ISResultsTableCellView : NSTableCellView
 
@@ -14,5 +15,7 @@
 @property (weak) IBOutlet NSTextField *nameLabel;
 @property (weak) IBOutlet NSTextField *versionLabel;
 @property (weak) IBOutlet NSTextField *sizeLabel;
+
+- (id)initWithApp: (ISApp *)app;
 
 @end

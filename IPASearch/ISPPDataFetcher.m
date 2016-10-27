@@ -10,7 +10,16 @@
 
 @implementation ISPPDataFetcher
 
+- (id)init {
+    if (self = [super init])  {
+        self.count = 0;
+        self.maxCount = 0;
+    }
+    return self;
+}
+
 - (void)searchAppWithKeyword: (NSString *)keyword searchType: (PPSearchType)type maxResultCount: (int)count {
+    self.maxCount = count;
     NSString *tunnel = (type == PPJBSEARCHTYPE) ? PPJBSEARCHTUNNELCOMMAND : PPSTORESEARCHTUNNELCOMMAND;
     NSNumber *clFlag = (type == PPJBSEARCHTYPE) ? [NSNumber numberWithInt:1] : [NSNumber numberWithInt:3];
     
@@ -70,12 +79,14 @@
         return;
     }
     // Parse Correct Result.
-    self.count = [[results objectForKey:@"searchCount"] integerValue];
+    NSInteger fetchedCount = [[results objectForKey:@"searchCount"] integerValue];
+    self.count = (fetchedCount > self.maxCount) ? self.maxCount : fetchedCount;
     self.apps = [NSMutableArray array];
     if (self.count == 0) {
         return;
     }
     NSArray *appInfo = [results objectForKey:@"content"];
+    self.count = [appInfo count];   // Make sure the app's count is correct.
     for (NSDictionary *aApp in appInfo) {
         NSURL *iconUrl = [NSURL URLWithString:[aApp objectForKey:@"thumb"]];
         NSURL *ipaUrl = [NSURL URLWithString:[aApp objectForKey:@"downurl"]];
@@ -85,6 +96,8 @@
         ISApp *app = [[ISApp alloc]initWithAppName:appName version:version size:size iconURL:iconUrl ipaURL:ipaUrl];
         [self.apps addObject:app];
     }
+    NSLog(@"Fetched data successfully.");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"FetchedAppDataSuccessfully" object:self];
 }
 
 @end

@@ -23,6 +23,7 @@ typedef enum {
 
 @property NSMutableArray *apps;
 @property NSInteger count;
+@property NSInteger maxCount;
 @property NSInteger statusCode;
 
 - (void)searchAppWithKeyword: (NSString *)keyword searchType: (PPSearchType)type maxResultCount: (int)count;

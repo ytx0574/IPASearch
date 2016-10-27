@@ -8,12 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 #import "ISPPDataFetcher.h"
+#import "ISResultsTableCellView.h"
 
-@interface ISMainWindowController : NSViewController<NSSearchFieldDelegate>
+@interface ISMainWindowController : NSViewController<NSSearchFieldDelegate, NSTableViewDelegate, NSTableViewDataSource>
 
 @property (weak) IBOutlet NSSearchField *searchField;
 @property (weak) IBOutlet NSPopUpButton *typeSelector;
-@property (weak) IBOutlet NSTableView *resultsTableView;
+@property (weak, nonatomic) IBOutlet NSTableView *resultsTableView;
 @property ISPPDataFetcher *fetcher;
 
 @end
