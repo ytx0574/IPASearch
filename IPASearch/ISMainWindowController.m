@@ -30,7 +30,8 @@
 
 - (IBAction)searchAnswer:(id)sender {
     NSLog(@"search answer: %@", [self.searchField stringValue]);
-    [self.fetcher searchAppWithKeyword:[self.searchField stringValue] searchType:PPJBSEARCHTYPE maxResultCount:15];
+    PPSearchType type = (self.typeSelector.selectedTag == 0) ? PPJBSEARCHTYPE : PPSTORESEARCHTYPE;
+    [self.fetcher searchAppWithKeyword:[self.searchField stringValue] searchType:type maxResultCount:15];
 }
 
 

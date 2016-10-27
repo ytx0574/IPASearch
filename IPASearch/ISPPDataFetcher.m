@@ -64,7 +64,27 @@
         return;
     }
     NSDictionary *results = object;
-    NSLog(@"%@", results);
+    self.statusCode = [[results objectForKey:@"status"] integerValue];
+    if (self.statusCode != 0) {
+        NSLog(@"Bad Response (code: %ld).", (long)self.statusCode);
+        return;
+    }
+    // Parse Correct Result.
+    self.count = [[results objectForKey:@"searchCount"] integerValue];
+    self.apps = [NSMutableArray array];
+    if (self.count == 0) {
+        return;
+    }
+    NSArray *appInfo = [results objectForKey:@"content"];
+    for (NSDictionary *aApp in appInfo) {
+        NSURL *iconUrl = [NSURL URLWithString:[aApp objectForKey:@"thumb"]];
+        NSURL *ipaUrl = [NSURL URLWithString:[aApp objectForKey:@"downurl"]];
+        NSString *appName = [aApp objectForKey:@"title"];
+        NSString *version = [aApp objectForKey:@"version"];
+        NSString *size = [aApp objectForKey:@"fsize"];
+        ISApp *app = [[ISApp alloc]initWithAppName:appName version:version size:size iconURL:iconUrl ipaURL:ipaUrl];
+        [self.apps addObject:app];
+    }
 }
 
 @end

@@ -694,7 +694,7 @@
                                     <menu key="menu" id="90c-Ql-thF">
                                         <items>
                                             <menuItem title="Decrypted App" state="on" id="9us-Ux-aXA"/>
-                                            <menuItem title="App Store App" id="KcH-wb-gCa"/>
+                                            <menuItem title="App Store App" tag="1" id="KcH-wb-gCa"/>
                                         </items>
                                     </menu>
                                 </popUpButtonCell>

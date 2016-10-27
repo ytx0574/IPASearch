@@ -21,7 +21,7 @@ typedef enum {
 
 @interface ISPPDataFetcher : NSObject<NSURLSessionDelegate>
 
-@property NSArray *apps;
+@property NSMutableArray *apps;
 @property NSInteger count;
 @property NSInteger statusCode;
 
