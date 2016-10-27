@@ -16,8 +16,11 @@
     [self.resultsTableView.headerView removeFromSuperview];
     self.resultsTableView.headerView = nil;
     [self.resultsTableView reloadData];
+    // Set tableView.
     self.resultsTableView.dataSource = self;
     self.resultsTableView.delegate = self;
+    self.resultsTableView.doubleAction = @selector(handleDoubleClick:);
+    // Set search field.
     self.searchField.delegate = self;
     // Init fetcher.
     self.fetcher = [[ISPPDataFetcher alloc] init];
@@ -51,6 +54,15 @@
     });
 }
 
+- (void)handleDoubleClick: (id)sender {
+    [self downloadIpaForRow: self.resultsTableView.clickedRow];
+}
+
+- (void)downloadIpaForRow: (NSInteger)row {
+    ISApp *app = self.fetcher.apps[row];
+    [[NSWorkspace sharedWorkspace] openURL:app.ipaUrl];
+}
+
 #pragma mark - NSTableViewDataSource methods
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
@@ -62,7 +74,6 @@
     NSString *identifier = tableColumn.identifier;
     ISResultsTableCellView *cellView = [tableView makeViewWithIdentifier:identifier owner:self];
     [cellView showInfoOfApp: app];
-    
     return cellView;
 }
 
