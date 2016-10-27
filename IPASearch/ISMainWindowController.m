@@ -59,7 +59,10 @@
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     ISApp *app = self.fetcher.apps[row];
-    ISResultsTableCellView *cellView = [[ISResultsTableCellView alloc] initWithApp: app];
+    NSString *identifier = tableColumn.identifier;
+    ISResultsTableCellView *cellView = [tableView makeViewWithIdentifier:identifier owner:self];
+    [cellView showInfoOfApp: app];
+    
     return cellView;
 }
 

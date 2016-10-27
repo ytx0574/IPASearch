@@ -16,6 +16,6 @@
 @property (weak) IBOutlet NSTextField *versionLabel;
 @property (weak) IBOutlet NSTextField *sizeLabel;
 
-- (id)initWithApp: (ISApp *)app;
+- (void)showInfoOfApp: (ISApp *)app;
 
 @end

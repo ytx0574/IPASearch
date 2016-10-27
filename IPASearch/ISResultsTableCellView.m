@@ -16,10 +16,8 @@
     // Drawing code here.
 }
 
-- (id)initWithApp: (ISApp *)app {
-    if (self = [super init]) {
-        [self showInfoOfApp: app];
-    }
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
     return self;
 }
 
