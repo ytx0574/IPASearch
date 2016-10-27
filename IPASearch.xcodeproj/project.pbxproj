@@ -15,6 +15,7 @@
 		0AD9D4351DC1D71A00EB2FCE /* ISResultsTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9D4341DC1D71A00EB2FCE /* ISResultsTableCellView.m */; };
 		0AF7DB8A1DC1E0AD00CDDBC7 /* ISPPDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7DB891DC1E0AD00CDDBC7 /* ISPPDataFetcher.m */; };
 		0AF7DB8D1DC1E42D00CDDBC7 /* ISApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF7DB8C1DC1E42D00CDDBC7 /* ISApp.m */; };
+		0AF7DB8F1DC2287D00CDDBC7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0AF7DB8E1DC2287D00CDDBC7 /* Credits.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		0AF7DB891DC1E0AD00CDDBC7 /* ISPPDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISPPDataFetcher.m; sourceTree = "<group>"; };
 		0AF7DB8B1DC1E42D00CDDBC7 /* ISApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISApp.h; sourceTree = "<group>"; };
 		0AF7DB8C1DC1E42D00CDDBC7 /* ISApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISApp.m; sourceTree = "<group>"; };
+		0AF7DB8E1DC2287D00CDDBC7 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				0AD9D4231DC1C8E600EB2FCE /* main.m */,
+				0AF7DB8E1DC2287D00CDDBC7 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AD9D4291DC1C8E600EB2FCE /* Assets.xcassets in Resources */,
+				0AF7DB8F1DC2287D00CDDBC7 /* Credits.rtf in Resources */,
 				0AD9D42C1DC1C8E600EB2FCE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
