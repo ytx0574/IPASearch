@@ -26,6 +26,10 @@
     // Init fetcher.
     self.fetcher = [[ISPPDataFetcher alloc] init];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDataFetched:)  name:@"FetchedAppDataSuccessfully" object:nil];
+    // Set Touch Bar.
+    self.mainBar.delegate = self;
+    self.downloadBarButton.hidden = YES;
+    self.downloadBarButton.image = [NSImage imageNamed:NSImageNameTouchBarDownloadTemplate];
 }
 
 
@@ -80,6 +84,14 @@
     ISResultsTableCellView *cellView = [tableView makeViewWithIdentifier:identifier owner:self];
     [cellView showInfoOfApp: app];
     return cellView;
+}
+
+#pragma mark = NSTableViewDelegate methods
+
+- (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
+    self.downloadBarButton.hidden = NO;
+    self.downloadBarButton.action = @selector(returnKeyPressed:);
+    return YES;
 }
 
 @end

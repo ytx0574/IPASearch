@@ -11,12 +11,14 @@
 #import "ISPPDataFetcher.h"
 #import "ISResultsTableCellView.h"
 
-@interface ISMainWindowController : NSViewController<NSSearchFieldDelegate, NSTableViewDelegate, NSTableViewDataSource>
+@interface ISMainWindowController : NSViewController<NSSearchFieldDelegate, NSTableViewDelegate, NSTableViewDataSource, NSTouchBarDelegate>
 
 @property (weak) IBOutlet NSSearchField *searchField;
 @property (weak) IBOutlet NSPopUpButton *typeSelector;
 @property (weak, nonatomic) IBOutlet ISResultsTableView *resultsTableView;
 @property ISPPDataFetcher *fetcher;
+@property (weak) IBOutlet NSTouchBar *mainBar;
+@property (weak) IBOutlet NSButton *downloadBarButton;
 
 @end
 
