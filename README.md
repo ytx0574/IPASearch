@@ -12,3 +12,5 @@
 
 ![screenshot](Assets/screenshot.png)
 
+![touchBar](Assets/touchBar.png)
+
