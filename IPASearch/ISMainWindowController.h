@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ISResultsTableView.h"
 #import "ISPPDataFetcher.h"
 #import "ISResultsTableCellView.h"
 
@@ -14,7 +15,7 @@
 
 @property (weak) IBOutlet NSSearchField *searchField;
 @property (weak) IBOutlet NSPopUpButton *typeSelector;
-@property (weak, nonatomic) IBOutlet NSTableView *resultsTableView;
+@property (weak, nonatomic) IBOutlet ISResultsTableView *resultsTableView;
 @property ISPPDataFetcher *fetcher;
 
 @end

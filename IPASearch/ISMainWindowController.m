@@ -20,6 +20,7 @@
     self.resultsTableView.dataSource = self;
     self.resultsTableView.delegate = self;
     self.resultsTableView.doubleAction = @selector(handleDoubleClick:);
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(returnKeyPressed:) name:@"ReturnKeyPressed" object:nil];
     // Set search field.
     self.searchField.delegate = self;
     // Init fetcher.
@@ -54,6 +55,10 @@
     });
 }
 
+- (void)returnKeyPressed: (NSNotification *)notification {
+    [self downloadIpaForRow:self.resultsTableView.selectedRow];
+}
+
 - (void)handleDoubleClick: (id)sender {
     [self downloadIpaForRow: self.resultsTableView.clickedRow];
 }
@@ -76,6 +81,5 @@
     [cellView showInfoOfApp: app];
     return cellView;
 }
-
 
 @end

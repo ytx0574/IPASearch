@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AB00B231DC44CDE00DF1F09 /* ISResultsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB00B221DC44CDE00DF1F09 /* ISResultsTableView.m */; };
 		0AD9D4211DC1C8E600EB2FCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9D4201DC1C8E600EB2FCE /* AppDelegate.m */; };
 		0AD9D4241DC1C8E600EB2FCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9D4231DC1C8E600EB2FCE /* main.m */; };
 		0AD9D4271DC1C8E600EB2FCE /* ISMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD9D4261DC1C8E600EB2FCE /* ISMainWindowController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AB00B211DC44CDE00DF1F09 /* ISResultsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISResultsTableView.h; sourceTree = "<group>"; };
+		0AB00B221DC44CDE00DF1F09 /* ISResultsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISResultsTableView.m; sourceTree = "<group>"; };
 		0AD9D41C1DC1C8E600EB2FCE /* IPASearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPASearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD9D41F1DC1C8E600EB2FCE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0AD9D4201DC1C8E600EB2FCE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,6 +82,8 @@
 				0AD9D42A1DC1C8E600EB2FCE /* Main.storyboard */,
 				0AD9D4331DC1D71A00EB2FCE /* ISResultsTableCellView.h */,
 				0AD9D4341DC1D71A00EB2FCE /* ISResultsTableCellView.m */,
+				0AB00B211DC44CDE00DF1F09 /* ISResultsTableView.h */,
+				0AB00B221DC44CDE00DF1F09 /* ISResultsTableView.m */,
 				0AD9D42D1DC1C8E600EB2FCE /* Info.plist */,
 				0AD9D4221DC1C8E600EB2FCE /* Supporting Files */,
 			);
@@ -120,7 +125,7 @@
 		0AD9D4141DC1C8E600EB2FCE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Wang Jinli";
 				TargetAttributes = {
 					0AD9D41B1DC1C8E600EB2FCE = {
@@ -172,6 +177,7 @@
 				0AD9D4241DC1C8E600EB2FCE /* main.m in Sources */,
 				0AD9D4211DC1C8E600EB2FCE /* AppDelegate.m in Sources */,
 				0AF7DB8D1DC1E42D00CDDBC7 /* ISApp.m in Sources */,
+				0AB00B231DC44CDE00DF1F09 /* ISResultsTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +213,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -254,6 +261,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -280,6 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7X9UFZRCPT;
 				INFOPLIST_FILE = IPASearch/Info.plist;
@@ -293,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7X9UFZRCPT;
 				INFOPLIST_FILE = IPASearch/Info.plist;
