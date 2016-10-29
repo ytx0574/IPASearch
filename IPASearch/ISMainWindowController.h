@@ -19,6 +19,10 @@
 @property ISPPDataFetcher *fetcher;
 @property (weak) IBOutlet NSTouchBar *mainBar;
 @property (weak) IBOutlet NSButton *downloadBarButton;
+@property (weak) IBOutlet NSPopoverTouchBarItem *showInfoBarButton;
+@property (weak) IBOutlet NSTouchBar *infoBar;
+@property (weak) IBOutlet NSScrollView *infoBarScrollView;
+@property (unsafe_unretained) IBOutlet NSTextView *infoBarTextView;
 
 @end
 

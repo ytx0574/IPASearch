@@ -93,7 +93,8 @@
         NSString *appName = [aApp objectForKey:@"title"];
         NSString *version = [aApp objectForKey:@"version"];
         NSString *size = [aApp objectForKey:@"fsize"];
-        ISApp *app = [[ISApp alloc]initWithAppName:appName version:version size:size iconURL:iconUrl ipaURL:ipaUrl];
+        NSString *description = [aApp objectForKey:@"desc"];
+        ISApp *app = [[ISApp alloc]initWithAppName:appName version:version size:size iconURL:iconUrl ipaURL:ipaUrl description:description];
         [self.apps addObject:app];
     }
     NSLog(@"Fetched data successfully.");

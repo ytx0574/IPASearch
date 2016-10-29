@@ -26,10 +26,18 @@
     // Init fetcher.
     self.fetcher = [[ISPPDataFetcher alloc] init];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDataFetched:)  name:@"FetchedAppDataSuccessfully" object:nil];
-    // Set Touch Bar.
+    // Set Main Touch Bar.
     self.mainBar.delegate = self;
     self.downloadBarButton.hidden = YES;
     self.downloadBarButton.image = [NSImage imageNamed:NSImageNameTouchBarDownloadTemplate];
+    self.infoBar.delegate = self;
+    // Set Info Touch Bar.
+    self.showInfoBarButton.collapsedRepresentation.hidden = YES;
+    self.showInfoBarButton.collapsedRepresentationImage = [NSImage imageNamed:NSImageNameTouchBarGetInfoTemplate];
+    self.showInfoBarButton.collapsedRepresentationLabel = @"";
+    [self.infoBarTextView setMaxSize:NSMakeSize(FLT_MAX, FLT_MAX)];
+    self.infoBarTextView.textContainer.widthTracksTextView = NO;
+    [self.infoBarTextView.textContainer setContainerSize:NSMakeSize(FLT_MAX, FLT_MAX)];
 }
 
 
@@ -91,6 +99,9 @@
 - (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
     self.downloadBarButton.hidden = NO;
     self.downloadBarButton.action = @selector(returnKeyPressed:);
+    ISApp *app = self.fetcher.apps[row];
+    self.showInfoBarButton.collapsedRepresentation.hidden = NO;
+    [self.infoBarTextView setString:app.desc];
     return YES;
 }
 

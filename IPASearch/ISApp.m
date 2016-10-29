@@ -10,13 +10,14 @@
 
 @implementation ISApp
 
-- (id)initWithAppName: (NSString *)appName version: (NSString *)version size: (NSString *)size iconURL: (NSURL *)iconUrl ipaURL: (NSURL *)ipaUrl {
+- (id)initWithAppName: (NSString *)appName version: (NSString *)version size: (NSString *)size iconURL: (NSURL *)iconUrl ipaURL: (NSURL *)ipaUrl description: (NSString *)description {
     if (self = [super init]) {
         self.appName = appName;
         self.version = version;
         self.size = size;
         self.iconUrl = iconUrl;
         self.ipaUrl = ipaUrl;
+        self.desc = description;
     }
     return self;
 }

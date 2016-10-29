@@ -849,13 +849,75 @@
                                     </button>
                                 </viewController>
                             </touchBarItem>
+                            <touchBarPopoverItem collapsedRepresentationLabel="Popover" id="Zcj-Vt-B96">
+                                <touchBar key="popoverTouchBar" id="Z3E-fI-rvf">
+                                    <touchBarItems>
+                                        <touchBarItem id="zli-f2-OIa">
+                                            <viewController key="viewController" id="iLE-TB-AYW">
+                                                <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="stm-ag-io5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="960" height="38"/>
+                                                    <subviews>
+                                                        <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="L9j-Vf-rLo">
+                                                            <rect key="frame" x="0.0" y="0.0" width="960" height="38"/>
+                                                            <clipView key="contentView" id="d7O-b1-9N6">
+                                                                <rect key="frame" x="0.0" y="0.0" width="960" height="38"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <textView editable="NO" selectable="NO" importsGraphics="NO" richText="NO" horizontallyResizable="YES" verticallyResizable="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="FcR-8H-4BE">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="960" height="38"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <color key="backgroundColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                                                        <size key="minSize" width="960" height="38"/>
+                                                                        <size key="maxSize" width="1000000" height="38"/>
+                                                                        <attributedString key="textStorage">
+                                                                            <fragment content="微信，是一个生活方式。· 在聊天中，可以发送文字、语音、表情、图片、视频等。· 高质量语音和视频通话，随时和朋友面对面。· 朋友圈，记录你和朋友们的生活。· 在公众号，找到服务和资讯，与世界紧紧相连。">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                    <font key="NSFont" size="20" name="PingFangSC-Regular"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                        </attributedString>
+                                                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
+                                                            </clipView>
+                                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="dLf-gz-BU0">
+                                                                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </scroller>
+                                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="vN1-eM-t7c">
+                                                                <rect key="frame" x="-100" y="-100" width="15" height="38"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </scroller>
+                                                        </scrollView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="L9j-Vf-rLo" firstAttribute="leading" secondItem="stm-ag-io5" secondAttribute="leading" id="NzZ-9E-80x"/>
+                                                        <constraint firstAttribute="bottom" secondItem="L9j-Vf-rLo" secondAttribute="bottom" id="cCl-ib-D4Y"/>
+                                                        <constraint firstAttribute="trailing" secondItem="L9j-Vf-rLo" secondAttribute="trailing" id="upd-Uu-z06"/>
+                                                        <constraint firstItem="L9j-Vf-rLo" firstAttribute="top" secondItem="stm-ag-io5" secondAttribute="top" id="vv3-Li-rfh"/>
+                                                    </constraints>
+                                                </view>
+                                            </viewController>
+                                            <size key="designTimeSize" width="960" height="38"/>
+                                        </touchBarItem>
+                                    </touchBarItems>
+                                </touchBar>
+                            </touchBarPopoverItem>
                         </touchBarItems>
                     </touchBar>
                     <connections>
                         <outlet property="downloadBarButton" destination="9RN-ZQ-QRm" id="WyI-Ch-0eJ"/>
+                        <outlet property="infoBar" destination="Z3E-fI-rvf" id="ocM-0Q-cUH"/>
+                        <outlet property="infoBarScrollView" destination="L9j-Vf-rLo" id="4M8-7b-2vx"/>
+                        <outlet property="infoBarTextView" destination="FcR-8H-4BE" id="xVi-1B-9To"/>
                         <outlet property="mainBar" destination="lkT-6m-ezA" id="2SP-Uj-HDv"/>
                         <outlet property="resultsTableView" destination="DFj-6i-jcr" id="QpY-96-evA"/>
                         <outlet property="searchField" destination="Otc-mu-yrJ" id="xgv-DF-7dg"/>
+                        <outlet property="showInfoBarButton" destination="Zcj-Vt-B96" id="qjn-gc-UWh"/>
                         <outlet property="typeSelector" destination="9XM-Zx-5Tf" id="mOk-sX-4Ku"/>
                     </connections>
                 </viewController>
